@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/bluefield/{name?}', function($name = 'Patient X') {
+    return 'Hello, <strong>'.$name.'</strong>. Welcome to Bluefield clinic.';
+});
