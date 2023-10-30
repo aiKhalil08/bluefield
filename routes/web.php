@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DoctorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,8 @@ Route::get('/', function () {
 Route::get('/bluefield/{name?}', function($name = 'Patient X') {
     return 'Hello, <strong>'.$name.'</strong>. Welcome to Bluefield clinic.';
 });
+
+
+// The following declarations define routes for the Doctor model
+
+Route::resource('doctor', DoctorController::class);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreDoctorRequest;
 use App\Http\Requests\UpdateDoctorRequest;
 use App\Models\Doctor;
+use Illuminate\Http\Response;
 
 class DoctorController extends Controller
 {
@@ -19,9 +20,9 @@ class DoctorController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): Response
     {
-        //
+        return response()->view('doctor.create');
     }
 
     /**
