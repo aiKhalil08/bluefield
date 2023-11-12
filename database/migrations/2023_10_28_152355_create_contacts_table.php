@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('email', 55);
             // $table->string('email_code', 20);
             $table->string('phone_number', 15);
-            $table->enum('preference', ['email', 'phone_number']);
+            $table->enum('preference', ['email', 'sms']);
             $table->bigInteger('owner_id');
             $table->string('owner_type', 25);
             $table->unique(['owner_id', 'owner_type']);
